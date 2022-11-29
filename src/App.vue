@@ -15,6 +15,7 @@ import './scss/App.scss'
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
+      <div class="font-bold text-white bg-neutral-800">Hello World</div>
     </div>
   </header>
 

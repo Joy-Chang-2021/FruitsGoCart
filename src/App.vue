@@ -8,7 +8,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <div class="max-w-screen-lg mx-auto p-3 flex justify-between">
         <!-- LOGO -->
         <h1>
-          Fruits 水果購
+          Fruits Go 水果購
         </h1>
         <!--darkMode/登入/註冊 -->
         <div class="flex items-center">
@@ -18,12 +18,7 @@ import { RouterLink, RouterView } from 'vue-router'
         </div>
       </div>
     </header>
-    <div class="max-w-screen-lg mx-auto">
-      <nav>
-        <RouterLink to="/">Index</RouterLink>
-        <RouterLink to="/Cart">Cart</RouterLink>
-      </nav>
-    </div>
+
     <RouterView />
   </div>
   

@@ -21,9 +21,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-header {
-  background-color: var(--color-heading);
-  color: var(--color-heading-text);
+.theme-color {
+  background-color: var(--color-theme);
+  color: var(--color-theme-text);
 }
 
 button {

@@ -1,17 +1,23 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
+  // white series
   --white: #ffffff;
   --white-soft: #f8f8f8; // mark
   --white-mute: #f2f2f2;
-
+  // black series
   --black: #181818;
   --black-soft: #222222; // mark
   --black-mute: #282828;
-
+  // grey series
+  --grey-light: #dbdbdb;
+  --grey-mute: #bebebe;
+  --grey: #808080;
+  --grey-dark: #4f4f4f;
+  // theme-color: light mode (default)
   --green: #03a0a0;
   --blue: #414380;
   --blue-light: #83c7ff;
-
+  // theme-color: dark mode
   --pink: #c85169;
   --orange: #ffa500;
   --orange-light: #ffd992;
@@ -19,25 +25,33 @@
 
 /* semantic color variables for this project */
 :root {
+  // basic
   --color-background: var(--white-mute);
-
-  --color-heading: var(--green);
-  --color-heading-text: var(--white-mute);
   --color-text: var(--black);
-
+  // theme color
+  --color-theme: var(--green);
+  --color-theme-text: var(--white-mute);
+  // theme button
   --color-btn-text: var(--white-mute);
   --color-btn-theme: var(--blue);
   --color-btn-second: var(--blue-light);
+  // statement
+  --color-statement-background: var(--grey-light);
+  --color-statement-text: var(--grey);
 }
 
 .dark-mode {
+  // basic
   --color-background: var(--black-mute);
-
-  --color-heading: var(--pink);
-  --color-heading-text: var(--white-mute);
   --color-text: var(--white-mute);
-
+  // theme color
+  --color-theme: var(--pink);
+  --color-theme-text: var(--white-mute);
+  // theme button
   --color-btn-text: var(--black-mute);
   --color-btn-theme: var(--orange);
   --color-btn-second: var(--orange-light);
+  // statement
+    --color-statement-background: var(--grey-dark);
+    --color-statement-text: var(--grey-mute);
 }

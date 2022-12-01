@@ -1,11 +1,10 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import './scss/App.scss'
 </script>
 
 <template>
   <div class="w-80 min-w-full mx-auto">
-    <header>
+    <header class="theme-color">
       <div class="max-w-screen-lg mx-auto p-3 flex justify-between">
         <!-- LOGO -->
         <h1>
@@ -19,13 +18,13 @@ import './scss/App.scss'
         </div>
       </div>
     </header>
-    <main class="max-w-screen-lg mx-auto">
+    <div class="max-w-screen-lg mx-auto">
       <nav>
         <RouterLink to="/">Index</RouterLink>
         <RouterLink to="/Cart">Cart</RouterLink>
       </nav>
-      <RouterView />
-    </main>
+    </div>
+    <RouterView />
   </div>
   
 </template>

@@ -3,8 +3,8 @@
 
 <template>
   <footer class="theme-color">
-    <div class="max-w-screen-lg mx-auto">
-      footer
+    <div class="max-w-screen-lg mx-auto text-center">
+      Copyright &copy; Fruits Go Website
     </div>
   </footer>
 </template>

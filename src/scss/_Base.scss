@@ -15,10 +15,12 @@
   --grey-dark: #4f4f4f;
   // theme-color: light mode (default)
   --green: #03a0a0;
+  --green-filter: invert(52%) sepia(81%) saturate(4430%) hue-rotate(152deg) brightness(94%) contrast(98%);
   --blue: #414380;
   --blue-light: #83c7ff;
   // theme-color: dark mode
   --pink: #c85169;
+  --pink-filter: invert(46%) sepia(31%) saturate(5195%) hue-rotate(320deg) brightness(88%) contrast(75%);
   --orange: #ffa500;
   --orange-light: #ffd992;
 }
@@ -38,6 +40,8 @@
   // statement
   --color-statement-background: var(--grey-light);
   --color-statement-text: var(--grey);
+  --color-statement-icon: var(--green-filter);
+  --color-statement-divide: var(--grey-mute);
 }
 
 .dark-mode {
@@ -54,4 +58,6 @@
   // statement
     --color-statement-background: var(--grey-dark);
     --color-statement-text: var(--grey-mute);
+    --color-statement-icon: var(--pink-filter);
+    --color-statement-divide: var(--grey);
 }

@@ -1,4 +1,31 @@
+// 底色及文字顏色
 .statement-color {
   background-color: var(--color-statement-background);
   color: var(--color-statement-text);
+}
+// svg icon 顏色更改
+.statement-icon {
+  filter: var(--color-statement-icon);
+}
+// 分隔線設定
+@media (min-width: 1024px) {
+  // 在 RWD lg 情況下，顯示分隔線
+  .statement-icon-box {
+    position: relative;
+    // 使用::before設定分隔線樣式
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5rem;
+      right: 0;
+      display: block;
+      width: 1px;
+      height: 10rem;
+      background-color: var(--color-statement-divide);
+    }
+    // 將第3條分隔線隱藏
+    &:nth-child(3)::before {
+      display: none;
+    }
+  }
 }

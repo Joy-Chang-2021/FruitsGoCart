@@ -4,7 +4,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <div class="w-80 min-w-full mx-auto">
-    <header class="theme-color">
+    <header class="theme-background">
       <div class="max-w-screen-lg mx-auto p-3 flex justify-between">
         <!-- LOGO -->
         <h1>

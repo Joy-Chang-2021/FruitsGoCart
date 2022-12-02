@@ -21,10 +21,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.theme-color {
-  background-color: var(--color-theme);
-  color: var(--color-theme-text);
-}
+
+// === 按鈕樣式 ===
 
 button {
   border: none;
@@ -34,7 +32,10 @@ button {
 
 .btn {
   @apply font-bold py-2 px-4 rounded cursor-pointer;
+}
 
+.btn-circle {
+  @apply p-1 rounded-full cursor-pointer
 }
 
 .btn-theme {
@@ -53,4 +54,28 @@ button {
     background-color: var(--color-btn-second);
     color: var(--color-text);
   }
+}
+
+// ===分隔線樣式===
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: var(--color-hr);
+}
+
+// === 顏色樣式===
+
+.theme-background {
+  // heading、footer
+  // light mode: 綠底、白字
+  // dark mode: 粉底、白字
+  background-color: var(--color-theme);
+  color: var(--color-theme-text);
+}
+
+.theme-text {
+  // light mode: 綠字
+  // dark mode: 粉字
+  color: var(--color-theme);
 }

@@ -1,4 +1,5 @@
 <script setup>
+import IndexProducts from "../components/IndexProducts.vue"
 import Statement from "../components/Statement.vue"
 import Footer from "../components/Footer.vue"
 let shopInfo = {
@@ -8,8 +9,10 @@ let shopInfo = {
 </script>
 
 <template>
-  <main class="max-w-screen-lg mx-auto pt-5">
+  <main class="max-w-screen-lg mx-auto pt-5 px-8">
+    <!-- 賣場名稱 -->
     <h2 class="font-bold">{{ shopInfo.name }}</h2>
+    <!-- 前往購物車 -->
     <div class="text-right">
       <RouterLink to="/Cart">
         <button class="btn btn-theme text-right">
@@ -17,6 +20,7 @@ let shopInfo = {
         </button>
       </RouterLink>
     </div>
+    <!-- 賣場介紹 -->
     <div class="mb-5">
       <p class="mb-2">賣場說明：</p>
       <p class="max-w-xl">
@@ -24,13 +28,17 @@ let shopInfo = {
         {{ shopInfo.description }}
       </p>
     </div>
+    <!-- 商品瀏覽模式 -->
     <div class="text-right mb-5">
       <!-- TODO: 加入 select 排列方法 -->
       <button class="btn btn-theme ml-3">搜尋</button>
       <button class="btn btn-theme ml-3">模式</button>
       <button class="btn btn-outline ml-3">模式</button>
-    </div>    
+    </div> 
+    <!-- 商品顯示區 -->
+    <IndexProducts />   
   </main>
+  <!-- 賣場聲明、頁腳 -->
   <Statement />
   <Footer />
 </template>

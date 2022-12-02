@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <footer class="theme-color">
+  <footer class="theme-background">
     <div class="max-w-screen-lg mx-auto text-center">
       Copyright &copy; Fruits Go Website
     </div>

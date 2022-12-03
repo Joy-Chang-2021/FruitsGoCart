@@ -2,3 +2,62 @@
   @apply rounded-md shadow-md;
   background-color: var(--color-background-card);
 }
+
+.cart-state-wrapper {
+  background-color: var(--color-background-section);
+  position: relative;
+  &::before {
+    position: absolute;
+    top: 35%;
+    left: 2rem;
+    display: block;
+    width: calc(100% - 4rem);
+    height: 2px;
+    content: "";
+    background-color: var(--color-cartState-default);
+  }
+  .progressBar {
+    position: absolute;
+    top: 35%;
+    left: 2rem;
+    display: block;
+    width: calc((100% - 4rem) / 2);
+    height: 2px;
+    background-color: var(--color-theme);
+    &.final {
+      width: calc(100% - 4rem)
+    }
+  }
+}
+
+.cart-state-circle {
+  // 圓形樣式
+  @apply inline-block text-xs w-5 h-5 border-solid border-2 rounded-full;
+}
+
+.cart-state-default {
+  // 待填寫狀態
+  color: var(--color-cartState-default);
+  border-color: var(--color-cartState-default);
+  h4 {
+    background-color: var(--color-cartState-default);
+  }
+}
+
+.cart-state-active {
+  // 填寫中狀態
+  color: var(--color-theme);
+  border-color: var(--color-theme);
+  h4 {
+    background-color: var(--color-background-section);
+  }
+}
+
+.cart-state-completed {
+  // 完成狀態
+  color: var(--color-theme);
+  border-color: var(--color-theme);
+  h4 {
+    background-color: var(--color-theme);
+  }
+}

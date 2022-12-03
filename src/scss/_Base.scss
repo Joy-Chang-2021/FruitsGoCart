@@ -33,6 +33,9 @@
   --color-hr: var(--grey-light);
   // index products, cart main background
   --color-background-card: var(--white);
+  // TODO: cartState
+  --color-background-section: var(--white-mute);
+  --color-cartState-default: var(--grey);
   // theme color
   --color-theme: var(--green);
   --color-theme-text: var(--white-mute);
@@ -52,8 +55,11 @@
   --color-background: var(--black-mute);
   --color-text: var(--white-mute);
   --color-hr: var(--grey-dark);
-  // index products
+  // index products, cart main background
   --color-background-card: var(--black);
+  // TODO: cartState
+  --color-background-section: var(--black-mute);
+  --color-cartState-default: var(--grey);
   // theme color
   --color-theme: var(--pink);
   --color-theme-text: var(--white-mute);

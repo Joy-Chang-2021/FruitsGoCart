@@ -18,25 +18,27 @@ let shopInfo = {
     <PaymentForm :checkoutState="checkoutState"/>
     <!-- 上一頁、下一頁：控制付帳流程步驟及狀態 -->
     <div class="py-3 flex justify-center">
-      <button 
-        v-show="checkoutState === 1"
-        class="btn btn-outline w-24">
-        <RouterLink to="/" class="no-underline">回賣場頁</RouterLink>
-      </button>
+      <RouterLink to="/" class="no-underline">
+        <button 
+          v-show="checkoutState === 1"
+          class="btn btn-outline w-24">
+          回賣場頁
+        </button>
+      </RouterLink>
       <button
-        v-show="checkoutState > 1"
+        v-show="checkoutState === 2"
         @click="--checkoutState"
         class="btn btn-outline w-24">
         回上一步
       </button>
       <button
-        v-show="checkoutState !== 3"
+        v-show="checkoutState < 2"
         @click="++checkoutState"
         class="btn btn-theme ml-3 w-24">
         下一步
       </button>
       <button
-        v-show="checkoutState === 3"
+        v-show="checkoutState === 2"
         class="btn btn-theme ml-3 w-24">
         送出結帳
       </button>

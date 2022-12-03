@@ -64,6 +64,12 @@ hr {
   background-color: var(--color-hr);
 }
 
+a {
+  :visited {
+    color: unset;
+  }
+}
+
 // === 顏色樣式===
 
 .theme-background {

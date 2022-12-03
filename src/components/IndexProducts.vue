@@ -26,20 +26,24 @@ import { onMounted } from '@vue/runtime-core'
         <!-- 增加數量 -->
         <button
           class="mr-3 btn-circle btn-outline w-8 h-8"
-          @click="++product.cartQuantity"
+          @click="++product.beforeAddInCart"
         >＋</button>
         <!-- 購物車數量 -->
         <span class="mr-3">
-          {{ countQuantity(product.cartQuantity, product.quantity) }}
+          {{ countBeforeAddInCart(product) }}
         </span>
         <!-- 減少數量 -->
         <button
           class="mr-3 btn-circle btn-outline w-8 h-8"
-          @click="--product.cartQuantity"
+          @click="--product.beforeAddInCart"
         >－</button>
         <!-- 加入購物車/直接結帳 -->
-        <button class="mr-3 btn btn-theme">加入購物車</button>
-        <button class="mr-3 btn btn-theme">直接結帳</button>
+        <button
+          @click="addInCart(product)" 
+          class="mr-3 btn btn-theme">加入購物車</button>
+        <button
+          @click="checkOutCart(product)"
+          class="mr-3 btn btn-theme">直接結帳</button>
       </div>
       <hr />
     </div>
@@ -75,6 +79,7 @@ export default {
   data() {
     return {
       allProducts: null,
+      cartData: {}
     }
   },
   methods: {
@@ -82,17 +87,42 @@ export default {
       this.allProducts = apiData.map(item => {
         return {
           ...item,
-          cartQuantity: 1
+          beforeAddInCart: 1
         }
       })
     },
+    addInCart(product) {
+      // 儲存預計使用的變數資料
+      const { id, name, image, beforeAddInCart, price } = product
+      // 若購物車內無此品項，加入商品資料
+      if (!this.cartData[id]) this.cartData[id] = { 
+        id, name, image, 
+        cartQuantity: beforeAddInCart,
+        price
+      }
+      // 若購物車內已有此品項，加入新增的數量
+      else this.cartData[id].cartQuantity += beforeAddInCart
+      localStorage.setItem('shoppingCart', JSON.stringify(this.cartData))
+      // 根據已放入購物車的數量，修改商店內的商品庫存量
+      product.quantity -= beforeAddInCart
+      product.beforeAddInCart = 1
+    },
+    checkOutCart(product) {
+      this.addInCart(product)
+      this.$router.push("/cart")
+    }
   },
   computed: {
-    countQuantity() {
-      return (number, max) => {
-        if (number < 1) return 1
-        else if (number > max) return max
-        else return number
+    countBeforeAddInCart() {
+      return (product) => {
+        // 若庫存量 0，則預計放入購物車的可選擇數量為 0
+        if (product.quantity === 0) product.beforeAddInCart = 0
+        // 預計放入購物車的可選擇數量，最少為 0
+        else if (product.beforeAddInCart < 0) product.beforeAddInCart = 0
+        // 計放入購物車的可選擇數量，上限為庫存量
+        else if (product.beforeAddInCart > product.quantity) product.beforeAddInCart = max
+        // 返回要顯示的「放入購物車的可選擇數量」
+        return product.beforeAddInCart
       }
     }
   },

@@ -31,7 +31,7 @@
   --color-background: var(--white-mute);
   --color-text: var(--black);
   --color-hr: var(--grey-light);
-  // index products
+  // index products, cart main background
   --color-background-card: var(--white);
   // theme color
   --color-theme: var(--green);
@@ -62,8 +62,8 @@
   --color-btn-theme: var(--orange);
   --color-btn-second: var(--orange-light);
   // statement
-    --color-statement-background: var(--grey-dark);
-    --color-statement-text: var(--grey-mute);
-    --color-statement-icon: var(--pink-filter);
-    --color-statement-divide: var(--grey);
+  --color-statement-background: var(--grey-dark);
+  --color-statement-text: var(--grey-mute);
+  --color-statement-icon: var(--pink-filter);
+  --color-statement-divide: var(--grey);
 }

@@ -15,11 +15,13 @@
   --grey-dark: #4f4f4f;
   // theme-color: light mode (default)
   --green: #03a0a0;
+  --green-transparent: #03a0a033;
   --green-filter: invert(52%) sepia(81%) saturate(4430%) hue-rotate(152deg) brightness(94%) contrast(98%);
   --blue: #414380;
   --blue-light: #83c7ff;
   // theme-color: dark mode
   --pink: #c85169;
+  --pink-transparent: #c8516880;
   --pink-filter: invert(46%) sepia(31%) saturate(5195%) hue-rotate(320deg) brightness(88%) contrast(75%);
   --orange: #ffa500;
   --orange-light: #ffd992;
@@ -33,9 +35,11 @@
   --color-hr: var(--grey-light);
   // index products, cart main background
   --color-background-card: var(--white);
-  // TODO: cartState
+  // cartState
   --color-background-section: var(--white-mute);
   --color-cartState-default: var(--grey);
+  // TODO: order
+  --color-background-orderItem: var(--green-transparent);
   // theme color
   --color-theme: var(--green);
   --color-theme-text: var(--white-mute);
@@ -57,9 +61,11 @@
   --color-hr: var(--grey-dark);
   // index products, cart main background
   --color-background-card: var(--black);
-  // TODO: cartState
+  // cartState
   --color-background-section: var(--black-mute);
   --color-cartState-default: var(--grey);
+  // TODO: order
+  --color-background-orderItem: var(--pink-transparent);
   // theme color
   --color-theme: var(--pink);
   --color-theme-text: var(--white-mute);

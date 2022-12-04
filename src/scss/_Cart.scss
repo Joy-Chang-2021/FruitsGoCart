@@ -1,11 +1,19 @@
+select {
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+// 卡片效果
 .cart-main-wrapper {
   @apply rounded-md shadow-md;
   background-color: var(--color-background-card);
 }
 
+// 購物車進度、狀態顯示
 .cart-state-wrapper {
   background-color: var(--color-background-section);
   position: relative;
+  // 灰底進度線
   &::before {
     position: absolute;
     top: 35%;
@@ -16,6 +24,7 @@
     content: "";
     background-color: var(--color-cartState-default);
   }
+  // 主題色進度線
   .progressBar {
     position: absolute;
     top: 35%;
@@ -28,36 +37,37 @@
       width: calc(100% - 4rem)
     }
   }
-}
-
-.cart-state-circle {
   // 圓形樣式
-  @apply inline-block text-xs w-5 h-5 border-solid border-2 rounded-full;
-}
-
-.cart-state-default {
+  .cart-state-circle {
+    @apply inline-block text-xs w-5 h-5 border-solid border-2 rounded-full;
+  }
   // 待填寫狀態
-  color: var(--color-cartState-default);
-  border-color: var(--color-cartState-default);
-  h4 {
-    background-color: var(--color-cartState-default);
+  .cart-state-default {
+    color: var(--color-cartState-default);
+    border-color: var(--color-cartState-default);
+    h4 {
+      background-color: var(--color-cartState-default);
+    }
   }
-}
-
-.cart-state-active {
   // 填寫中狀態
-  color: var(--color-theme);
-  border-color: var(--color-theme);
-  h4 {
-    background-color: var(--color-background-section);
+  .cart-state-active {
+    color: var(--color-theme);
+    border-color: var(--color-theme);
+    h4 {
+      background-color: var(--color-background-section);
+    }
+  }
+  // 完成狀態
+  .cart-state-completed {
+    color: var(--color-theme);
+    border-color: var(--color-theme);
+    h4 {
+      background-color: var(--color-theme);
+    }
   }
 }
 
-.cart-state-completed {
-  // 完成狀態
-  color: var(--color-theme);
-  border-color: var(--color-theme);
-  h4 {
-    background-color: var(--color-theme);
-  }
+// 購物車表格基本設定
+.order-text {
+  font-size: calc(1rem - 2px);
 }

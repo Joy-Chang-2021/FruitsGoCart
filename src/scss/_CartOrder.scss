@@ -1,0 +1,28 @@
+
+.orderDone {
+  // mobile + PC mode: 皆有底線
+  @apply py-1;
+  border-bottom: 1px solid var(--color-hr);
+}
+
+.orderCategory {
+  // 大標題：主題色文字+底線
+  padding-bottom: calc(0.25rem + 1px);
+  border-bottom: 2px solid var(--color-theme);
+  color: var(--color-theme);
+}
+
+.orderName {
+  // 小標題：主題背景色+透明度
+  @apply my-1 rounded;
+  background-color: var(--color-background-orderItem);
+}
+
+// PC mode
+@media (min-width: 640px) {
+  .ordering {
+    // mobile mode: 沒有底線
+    // PC mode: 灰色底線
+    border-bottom: 1px solid var(--color-hr);
+  }
+}

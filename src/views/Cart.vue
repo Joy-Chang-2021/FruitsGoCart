@@ -17,19 +17,19 @@ let shopInfo = {
     <!-- 顯示付帳流程的狀態 -->
     <CartState :checkoutState="checkoutState"/>
     <!-- 顯示付帳的詳細內容 -->
-    <div class="flex flex-col mx-2">
-      <!-- 訂單明細 -->
-      <OrderList
-        :class="[{'order-3': checkoutState === 3}]" 
-        :checkoutState="checkoutState"/>
+    <div class="order-text flex flex-col mx-2">
+      <!-- 商品明細 -->
+      <div :class="[{'order-3': checkoutState === 3}]">
+        <OrderList :checkoutState="checkoutState"/>
+      </div>
       <!-- 取貨資料：付款方式、取貨方式 -->
-      <OrderShipping
-        :class="[{'hidden': checkoutState === 2}]"
-        :checkoutState="checkoutState"/>
+      <div>
+        <OrderShipping :checkoutState="checkoutState"/>
+      </div>
       <!-- 訂購人/取貨人資料 -->
-      <OrderRecipient 
-        :class="[{'hidden': checkoutState === 1}]"
-        :checkoutState="checkoutState"/>
+      <div :class="[{'hidden': checkoutState === 1}]">
+        <OrderRecipient :checkoutState="checkoutState"/>
+      </div>
     </div>
     <!-- 上一頁、下一頁：控制付帳流程步驟及狀態 -->
     <div class="py-3 flex justify-center">

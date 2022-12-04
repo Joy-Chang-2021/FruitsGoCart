@@ -1,7 +1,7 @@
 <script setup>
 import IndexProducts from "../components/IndexProducts.vue"
-import Statement from "../components/Statement.vue"
-import Footer from "../components/Footer.vue"
+import IndexStatement from "../components/IndexStatement.vue"
+import IndexFooter from "../components/IndexFooter.vue"
 let shopInfo = {
   name: "賣場名稱",
   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiisitaquequodpraesentiumexplicaboincidunt? Dolores beatae nam at sed dolorum ratione dolorem nisi velit cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiisitaquequodpraesentiumexplicaboincidunt? Dolores beatae nam at sed dolorum ratione dolorem nisi velit cum."
@@ -39,6 +39,6 @@ let shopInfo = {
     <IndexProducts />   
   </main>
   <!-- 賣場聲明、頁腳 -->
-  <Statement />
-  <Footer />
+  <IndexStatement />
+  <IndexFooter />
 </template>

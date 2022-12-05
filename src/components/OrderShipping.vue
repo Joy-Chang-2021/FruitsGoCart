@@ -116,7 +116,7 @@
     <div class="ordering flex flex-col sm:flex-row">
       <p class="orderName sm:w-1/4 text-left sm:text-right px-2">訂單金額</p>
       <p class="sm:my-1 sm:w-3/4 flex flex-row justify-between px-2">
-        <span>$ {{ 1260 + shippingFee }}</span>
+        <span>$ {{ productsCost + shippingFee }}</span>
       </p>
     </div>
   </div>

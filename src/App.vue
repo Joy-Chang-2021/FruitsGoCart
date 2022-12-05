@@ -12,7 +12,7 @@ import { RouterLink, RouterView } from 'vue-router'
         </h1>
         <!--darkMode/登入/註冊 -->
         <div class="flex items-center">
-          <img src="/src/assets/darkMode.png" alt="模式" @click="darkMode" class="w-6 cursor-pointer">
+          <img src="../src/assets/darkMode.png" alt="模式" @click="darkMode" class="w-6 cursor-pointer">
           <button class="btn btn-outline ml-3">登入</button>
           <button class="btn btn-theme ml-2">註冊</button>
         </div>

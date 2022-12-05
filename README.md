@@ -1,6 +1,6 @@
 # Shopping Cart
 
-[Github page](https://Joy-Chang-2021.github.io/FruitsGo_Cart/)
+[Demo](https://fruitsgocart.web.app/)
 
 模擬7-11的賣貨便網站，可選擇商品品項及數量、交易取貨的方式，結帳後顯示交易的詳細資料畫面。
 
@@ -29,10 +29,10 @@
 - [x] 程式架構做到最大的沿用性、維護性，並於 Readme 說明想法
   - 購物車畫面的格式及排列皆不太相同，盡量將相同類型的資料放在同一個 Component 中，例：商品明細、付款及取貨方法、訂購及取貨人資料等，再根據購物的階段切換顯示每個 Component 內容
   - 所有畫面的共用樣式、各自畫面的共用樣式及獨立元件的樣式，使用不同的 SCSS 檔案進行整理
-- [ ] 使用 Firebase Hosting，提供連結進行瀏覽
-
+- [x] 使用 Firebase Hosting，提供連結進行瀏覽
+  - https://fruitsgocart.web.app/
 - [x] 提供 Github 程式碼
-
+  - https://github.com/Joy-Chang-2021/FruitsGo_Cart.git
 ---
 
 ## 專案下載

@@ -7,17 +7,32 @@ const router = createRouter({
     {
       path: '/',
       name: 'Index',
-      component: Index
+      component: Index,
+      meta: {
+        title: 'Shop',
+        description: '水果購商品，商品敘述'
+      }
     },
     {
       path: '/Cart',
       name: 'Cart',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/Cart.vue')
+      component: () => import('../views/Cart.vue'),
+      meta: {
+        title: 'Shopping Cart',
+        description: '水果購商品，結帳流程'
+      }
     }
   ]
+})
+
+router.beforeEach((to, from, next) => {
+  if (to.meta.title) {
+    document.title = to.meta.title
+  }
+  if (to.meta.description) {
+    document.querySelector('meta[name="description"]').setAttribute('content', to.meta.description)
+  }
+  next();
 })
 
 export default router

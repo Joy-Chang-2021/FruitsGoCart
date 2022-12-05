@@ -1,6 +1,11 @@
-select {
+// 輸入框樣式
+select, input[type="text"] {
   color: var(--color-text);
   background: var(--color-background);
+}
+
+input[type="text"] {
+  border: 1px solid var(--color-hr);
 }
 
 // 卡片效果

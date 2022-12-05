@@ -18,7 +18,7 @@ let shopInfo = {
     <CartState :checkoutState="checkoutState"/>
     <!-- 顯示付帳的詳細內容 -->
     <div class="order-text flex flex-col mx-2">
-      <!-- 商品明細 -->
+      <!-- 商品明細 - state(3) 時調換顯示位置 -->
       <div :class="[{'order-3': checkoutState === 3}]">
         <OrderList :checkoutState="checkoutState"/>
       </div>
@@ -26,7 +26,7 @@ let shopInfo = {
       <div>
         <OrderShipping :checkoutState="checkoutState"/>
       </div>
-      <!-- 訂購人/取貨人資料 -->
+      <!-- 訂購人/取貨人資料 - state(1) 時不顯示 -->
       <div :class="[{'hidden': checkoutState === 1}]">
         <OrderRecipient :checkoutState="checkoutState"/>
       </div>

@@ -1,4 +1,4 @@
-# Shopping Cart
+# Fruits Go Cart
 
 [Demo](https://fruitsgocart.web.app/)
 

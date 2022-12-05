@@ -2,10 +2,6 @@
 import IndexProducts from "../components/IndexProducts.vue"
 import IndexStatement from "../components/IndexStatement.vue"
 import IndexFooter from "../components/IndexFooter.vue"
-let shopInfo = {
-  name: "賣場名稱",
-  description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiisitaquequodpraesentiumexplicaboincidunt? Dolores beatae nam at sed dolorum ratione dolorem nisi velit cum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiisitaquequodpraesentiumexplicaboincidunt? Dolores beatae nam at sed dolorum ratione dolorem nisi velit cum."
-}
 </script>
 
 <template>
@@ -42,3 +38,37 @@ let shopInfo = {
   <IndexStatement />
   <IndexFooter />
 </template>
+
+<script>
+import shopAPI from "../apis/shop"
+
+export default {
+  data () {
+    return {
+      shopInfo: {
+        name: "賣場名稱",
+        description: "賣場介紹"
+      }
+    }
+  },
+  methods: {
+    async fetchShopInfo() {
+      try {
+        const { data, status } = await shopAPI.shopInfoAPI()
+        if (status !== 200) throw new Error()
+        const { name, description } = data
+        this.shopInfo = {
+          ...this.shopInfo,
+          name,
+          description
+        }
+      } catch (error) {
+        console.log(error)
+      }
+    }
+  },
+  created() {
+    this.fetchShopInfo()
+  }
+}
+</script>

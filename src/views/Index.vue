@@ -52,23 +52,24 @@ export default {
     }
   },
   methods: {
-    async fetchShopInfo() {
+    async fetchShopInfo(shopId) {
       try {
-        const { data, status } = await shopAPI.shopInfoAPI()
+        const { data, status } = await shopAPI.shopInfoAPI(shopId)
         if (status !== 200) throw new Error()
-        const { name, description } = data
+        const { name, description, products } = data
         this.shopInfo = {
           ...this.shopInfo,
           name,
           description
         }
+        console.log(products)
       } catch (error) {
         console.log(error)
       }
     }
   },
   created() {
-    this.fetchShopInfo()
+    this.fetchShopInfo('shop')
   }
 }
 </script>

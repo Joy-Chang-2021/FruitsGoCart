@@ -51,6 +51,7 @@ import { onMounted } from '@vue/runtime-core'
 </template>
 
 <script>
+// TODO: DUMMY DATA
 const apiData = [
   {
     id: 31277226,
@@ -127,6 +128,7 @@ export default {
     }
   },
   created() {
+    // TODO: 
     this.fetchProductsData()
   }
 }

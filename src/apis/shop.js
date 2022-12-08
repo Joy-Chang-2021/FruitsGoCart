@@ -1,8 +1,9 @@
 import axios from 'axios';
-const shopInfoURL = "https://mocki.io/v1/a1e8d8cd-a7cf-45a9-ac2b-b977b92368fe"
+const baseURL = "http://fruits-go/"
 
 export default {
-  shopInfoAPI() {
-    return axios.get(shopInfoURL)
+  shopInfoAPI(shopId) {
+    // 商店名稱、商店介紹、商品細項
+    return axios.get(baseURL + shopId)
   }
 } 

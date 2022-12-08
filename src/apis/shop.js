@@ -1,5 +1,5 @@
 import axios from 'axios';
-const baseURL = "http://fruits-go/"
+const baseURL = "https://fruits-go/"
 
 export default {
   shopInfoAPI(shopId) {

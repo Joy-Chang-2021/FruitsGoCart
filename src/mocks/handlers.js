@@ -2,7 +2,7 @@ import { rest } from 'msw'
 
 export const handlers = [
   // Handles a POST /login request
-  rest.get('http://fruits-go/:shop', (req, res, ctx) => {
+  rest.get('https://fruits-go/:shop', (req, res, ctx) => {
     return res(
       // Respond with a 200 status code
       ctx.status(200),
